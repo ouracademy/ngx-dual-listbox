@@ -1,0 +1,14 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "ouracademy",
+    "githubRepoName": "ngx-dual-listbox",
+    "npmModuleName": "ngx-dual-listbox",
+    "moduleGlobal": "ngxDualListbox",
+    "ngModuleName": "NgxDualListboxModule",
+    "selectorPrefix": "ngx",
+    "projectTitle": "Library ui abput selection",
+    "projectDescription": "Library ui abput selection",
+    "authorName": "Diana Quintanilla",
+    "packageManager": "npm"
+  }
+}
