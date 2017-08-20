@@ -1,0 +1,28 @@
+export class TransferenceHandler {
+  stateChoosed: Map<number, any[]> = new Map();
+  stateOfList: Map<number, any[]> = new Map();
+  constructor() {
+    this.stateChoosed.set(1, []);
+    this.stateChoosed.set(2, []);
+    this.stateOfList.set(1, []);
+    this.stateOfList.set(2, []);
+  }
+  add(item: any, type: number) {
+    this.stateChoosed.get(type).push(item);
+  }
+  private getChoosedItemsFrom(type: number) {
+    return this.stateChoosed.get(type);
+  }
+  private cleanChoosedItemsFrom(type: number) {
+    this.stateChoosed.set(type, []);
+  }
+  private deleteItemsFrom(items: any[], containerId: number) {
+    this.stateOfList.get(containerId);
+  }
+  private addItensFor() {}
+  transfer(fromId: number, toId: number, valueId: number) {
+    const payload = this.getChoosedItemsFrom(valueId);
+    this.deleteItemsFrom(payload, fromId);
+    this.cleanChoosedItemsFrom(valueId);
+  }
+}

@@ -1,0 +1,28 @@
+<div class="content">
+  <div>
+    <div *ngFor="let item of sourceList" (click)="chooseItem(item,1)">
+      <div *ngIf="templateItem;else noTemplate1">
+        <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
+        </ng-container>
+      </div>
+      <div #noTemplate1>
+        {{item.name}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn" (click)="transferTo(1,2)">Pasar a seleccionados</button>
+    <button class="btn" (click)="transferTo(2,1)">Pasar a candidatos</button>
+  </div>
+  <div>
+    <div *ngFor="let item of selectedList" (click)="chooseItem(item,2)">
+      <div *ngIf="templateItem;else noTemplate2">
+        <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
+        </ng-container>
+      </div>
+      <div #noTemplate2>
+        {{item.name}}
+      </div>
+    </div>
+  </div>
+</div>
