@@ -13,7 +13,7 @@ import { TransferenceHandler } from '../../model/transference';
   selector: 'ngx-dual-listbox',
   template: `<div class="content">
   <div>
-    <div *ngFor="let item of availableList" (click)="chooseItem(item,1)">
+    <div *ngFor="let item of _availableList" (click)="chooseItem(item,1)">
       <div *ngIf="templateItem;else noTemplate">
         <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
         </ng-container>
@@ -25,7 +25,7 @@ import { TransferenceHandler } from '../../model/transference';
     <button class="btn" (click)="transferTo(2,1)">Pasar a candidatos</button>
   </div>
   <div>
-    <div *ngFor="let item of selectedList" (click)="chooseItem(item,2)">
+    <div *ngFor="let item of _selectedList" (click)="chooseItem(item,2)">
       <div *ngIf="templateItem;else noTemplate">
         <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
         </ng-container>
@@ -55,8 +55,6 @@ export class NgxDualListboxComponent implements OnInit {
   @Output() selectedsChange = new EventEmitter();
   @ContentChild('templateItem') templateItem: TemplateRef<any>;
   choosedHandler: TransferenceHandler;
-
-  availableList: any[] = [];
   constructor() {
     this.choosedHandler = new TransferenceHandler();
   }
@@ -65,5 +63,13 @@ export class NgxDualListboxComponent implements OnInit {
   chooseItem(item: any, container: number) {
     this.choosedHandler.add(item, container);
   }
-  transferTo(sourceId: number, targetId: number) {}
+  transferTo(sourceId: number, targetId: number) {
+    this.choosedHandler.transfer(sourceId, targetId);
+  }
+  get _availableList() {
+    return this.choosedHandler.stateOfList.get(1);
+  }
+  get _selectedList() {
+    return this.choosedHandler.stateOfList.get(2);
+  }
 }
