@@ -4,6 +4,6 @@
     "directive-selector": [true, "attribute", "ngx", "camelCase"],
     "component-selector": [true, "element", "ngx", "kebab-case"],
     "pipe-naming": [true, "camelCase", "ngx"],
-    "no-inferrable-types": false
+    "no-inferrable-types": true
   }
 }
