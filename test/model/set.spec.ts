@@ -5,10 +5,10 @@ describe('set operations', () => {
   const set = [{ key: 4 }, { key: 5 }, { key: 7 }];
   describe('belongs', () => {
     it('should be true that 4 is member of [4,5,7]', () => {
-      expect(belongs({ key: 4 }, set, 'key')).to.be.true;
+      expect(belongs({ key: 4 }, set, 'key')).to.equals(true);
     });
     it('should be true that 12 is not  member of [4,5,7]', () => {
-      expect(belongs({ key: 12 }, set, 'key')).to.be.false;
+      expect(belongs({ key: 12 }, set, 'key')).to.equals(false);
     });
   });
   describe('difference', () => {
