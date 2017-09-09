@@ -63,7 +63,7 @@ import { TransferenceHandler } from '../../model/transference';
   template: `
   <div class="container-dualListBox">
     <div class="container-items" [style.minHeight]="minHeight">
-      <div *ngFor="let item of _availableList" [ngClass]="{ choosed:isChoosed(item,1) }" (click)="chooseItem(item,1)">
+      <div *ngFor="let item of availableItems" [ngClass]="{ choosed:isChoosed(item,1) }" (click)="chooseItem(item,1)">
         <div *ngIf="templateItem;else noTemplate">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
@@ -98,7 +98,7 @@ import { TransferenceHandler } from '../../model/transference';
     </div>
   </div>
     <div class="container-items" [style.minHeight]="minHeight">
-      <div *ngFor="let item of _selectedList" [ngClass]="{ choosed:isChoosed(item,2) }"  (click)="chooseItem(item,2)">
+      <div *ngFor="let item of selectedItems" [ngClass]="{ choosed:isChoosed(item,2) }"  (click)="chooseItem(item,2)">
         <div *ngIf="templateItem;else noTemplate2">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
@@ -111,26 +111,28 @@ import { TransferenceHandler } from '../../model/transference';
 </div>`
 })
 export class NgxDualListboxComponent implements OnInit {
-  projectTitle: string = 'Library ui abput selection';
   @Input() key = 'id';
+  @Input() items: any[];
+  @Input('selectedItems') _selectedItems: any[];
+  @Output() selectedItemsChange = new EventEmitter<any[]>();
+
+  // TODO: add custom properties like, display name, enable filter, enable sort
   @Input() minHeight = '200px';
-  @Input() display = 'name';
-  @Input() enablefilter = false;
-  @Input() enableSort = false;
-  @Input() sourceList: any[];
-  @Input() selectedList: any[];
-  @Output() selectedListChange = new EventEmitter<any[]>();
+
   @ContentChild('templateItem') templateItem: TemplateRef<any>;
   @ContentChild('templateArrowLeft') templateArrowLeft: TemplateRef<any>;
   @ContentChild('templateArrowRight') templateArrowRight: TemplateRef<any>;
-  transferenceHandler: TransferenceHandler;
+
+  private transferenceHandler: TransferenceHandler;
+
   constructor() {
     this.transferenceHandler = new TransferenceHandler();
   }
+
   ngOnInit() {
     this.transferenceHandler.initialize(
-      this.sourceList,
-      this.selectedList,
+      this.items,
+      this._selectedItems,
       this.key
     );
   }
@@ -138,16 +140,20 @@ export class NgxDualListboxComponent implements OnInit {
   chooseItem(item: any, container: number) {
     this.transferenceHandler.add(item, container);
   }
+
   transferTo(sourceId: number, targetId: number) {
     this.transferenceHandler.transfer(sourceId, targetId);
-    this.selectedListChange.emit(this._selectedList);
+    this.selectedItemsChange.emit(this.selectedItems);
   }
-  get _availableList() {
+
+  get availableItems() {
     return this.transferenceHandler.stateOfList.get(1);
   }
-  get _selectedList() {
+
+  get selectedItems() {
     return this.transferenceHandler.stateOfList.get(2);
   }
+
   isChoosed(item: any, idContainer: number) {
     return this.transferenceHandler.isChoosed(item, idContainer);
   }
