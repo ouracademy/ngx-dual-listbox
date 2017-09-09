@@ -64,13 +64,10 @@ import { TransferenceHandler } from '../../model/transference';
   <div class="container-dualListBox">
     <div class="container-items" [style.minHeight]="minHeight">
       <div *ngFor="let item of availableItems" [ngClass]="{ choosed:isChoosed(item,1) }" (click)="chooseItem(item,1)">
-        <div *ngIf="templateItem;else noTemplate">
+        <div *ngIf="templateItem;else noTemplateItem">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
         </div>
-        <ng-template #noTemplate>
-            {{item.name}}
-        </ng-template>
       </div>
     </div>
     <div class="container-buttons">
@@ -80,9 +77,7 @@ import { TransferenceHandler } from '../../model/transference';
           </ng-container>
        </div>
       <ng-template #arrowRigth class="btn-arrow">
-      <div class="btn-arrow">
-        Seleccionar
-        </div>
+        <div class="btn-arrow">Seleccionar</div>
       </ng-template>
     </div>
     <div class="" (click)="transferTo(2,1)">
@@ -90,24 +85,22 @@ import { TransferenceHandler } from '../../model/transference';
           <ng-container [ngTemplateOutlet]="templateArrowLeft">
           </ng-container>
         </div>
-         <ng-template #arrowLeft>
-         <div class="btn-arrow">
-           Regresar
-           </div>
-         </ng-template>
+        <ng-template #arrowLeft>
+          <div class="btn-arrow">Regresar</div>
+        </ng-template>
     </div>
   </div>
     <div class="container-items" [style.minHeight]="minHeight">
       <div *ngFor="let item of selectedItems" [ngClass]="{ choosed:isChoosed(item,2) }"  (click)="chooseItem(item,2)">
-        <div *ngIf="templateItem;else noTemplate2">
+        <div *ngIf="templateItem;else noTemplateItem">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
         </div>
-        <ng-template #noTemplate2>
-            {{item.name}}
-        </ng-template>
       </div>
     </div>
+  <ng-template #noTemplateItem>
+    {{item.name}}
+  </ng-template>
 </div>`
 })
 export class NgxDualListboxComponent implements OnInit {
