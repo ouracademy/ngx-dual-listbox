@@ -1,6 +1,6 @@
 {
   "name": "ngx-dual-listbox",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Library ui abput selection",
   "main": "./bundles/ngx-dual-listbox.umd.js",
   "module": "./index.js",

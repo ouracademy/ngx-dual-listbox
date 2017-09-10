@@ -56,7 +56,7 @@ import { difference } from '../../model/set';
            width:90px;
            text-align: center;
      }
-     .choosed{
+    .choosed{
            width: 100%;
            background: #91949c;
            color: white;
@@ -78,8 +78,8 @@ import { difference } from '../../model/set';
           <ng-container [ngTemplateOutlet]="templateArrowRight">
           </ng-container>
        </div>
-      <ng-template #arrowRigth class="btn-arrow">
-        <div class="btn-arrow">Seleccionar</div>
+      <ng-template #arrowRigth>
+        <div class="btn-arrow">&rarr;</div>
       </ng-template>
     </div>
     <div class="" (click)="return()">
@@ -88,7 +88,7 @@ import { difference } from '../../model/set';
           </ng-container>
         </div>
         <ng-template #arrowLeft>
-          <div class="btn-arrow">Regresar</div>
+          <div class="btn-arrow">&larr;</div>
         </ng-template>
     </div>
   </div>
@@ -132,12 +132,14 @@ export class NgxDualListboxComponent implements OnInit {
     const { from, to } = transfer(this.availableItems, this.selectedItems);
     this.availableItems = from;
     this.selectedItems = to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 
   return() {
     const { from, to } = transfer(this.selectedItems, this.availableItems);
     this.selectedItems = from;
     this.availableItems = to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 }
 

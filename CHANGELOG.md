@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/ouracademy/ngx-dual-listbox/compare/v0.1.1...v0.1.2) (2017-09-10)
+
+
+### Bug Fixes
+
+* **index:** bug not working 2-way databinding ([ea0d1b9](https://github.com/ouracademy/ngx-dual-listbox/commit/ea0d1b9))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/ouracademy/ngx-dual-listbox/compare/v0.1.0...v0.1.1) (2017-09-10)
 
