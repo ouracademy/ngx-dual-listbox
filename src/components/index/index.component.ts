@@ -73,7 +73,7 @@ import { difference } from '../../model/set';
       </div>
     </div>
     <div class="container-buttons">
-       <div class="" (click)="transferTo(1,2)">
+       <div class="" (click)="select()">
        <div *ngIf="templateArrowRight;else arrowRigth">
           <ng-container [ngTemplateOutlet]="templateArrowRight">
           </ng-container>
@@ -82,7 +82,7 @@ import { difference } from '../../model/set';
         <div class="btn-arrow">Seleccionar</div>
       </ng-template>
     </div>
-    <div class="" (click)="transferTo(2,1)">
+    <div class="" (click)="return()">
         <div *ngIf="templateArrowLeft;else arrowLeft">
           <ng-container [ngTemplateOutlet]="templateArrowLeft">
           </ng-container>
@@ -128,15 +128,16 @@ export class NgxDualListboxComponent implements OnInit {
     this.selectedItems = new ListSelectionImpl(this._selectedItems);
   }
 
-  transferTo(sourceId: number, targetId: number) {
-    // TODO
-    console.log(this.availableItems);
-    console.log(this.selectedItems);
-
+  select() {
     const { from, to } = transfer(this.availableItems, this.selectedItems);
-    console.log(from, to);
+    this.availableItems = from;
+    this.selectedItems = to;
+  }
 
-    this.selectedItemsChange.emit(this.selectedItems.totalItems);
+  return() {
+    const { from, to } = transfer(this.selectedItems, this.availableItems);
+    this.selectedItems = from;
+    this.availableItems = to;
   }
 }
 
