@@ -7,7 +7,9 @@ import {
   ContentChild,
   TemplateRef
 } from '@angular/core';
-import { TransferenceHandler } from '../../model/transference';
+
+import { ListSelection, ListSelectionImpl } from '../../model/list-selection';
+import { difference } from '../../model/set';
 
 @Component({
   selector: 'ngx-dual-listbox',
@@ -63,7 +65,7 @@ import { TransferenceHandler } from '../../model/transference';
   template: `
   <div class="container-dualListBox">
     <div class="container-items" [style.minHeight]="minHeight">
-      <div *ngFor="let item of availableItems" [ngClass]="{ choosed:isChoosed(item,1) }" (click)="chooseItem(item,1)">
+      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">
         <div *ngIf="templateItem;else noTemplateItem">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
@@ -91,7 +93,7 @@ import { TransferenceHandler } from '../../model/transference';
     </div>
   </div>
     <div class="container-items" [style.minHeight]="minHeight">
-      <div *ngFor="let item of selectedItems" [ngClass]="{ choosed:isChoosed(item,2) }"  (click)="chooseItem(item,2)">
+      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">
         <div *ngIf="templateItem;else noTemplateItem">
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
@@ -116,38 +118,33 @@ export class NgxDualListboxComponent implements OnInit {
   @ContentChild('templateArrowLeft') templateArrowLeft: TemplateRef<any>;
   @ContentChild('templateArrowRight') templateArrowRight: TemplateRef<any>;
 
-  private transferenceHandler: TransferenceHandler;
-
-  constructor() {
-    this.transferenceHandler = new TransferenceHandler();
-  }
+  availableItems: ListSelection;
+  selectedItems: ListSelection;
 
   ngOnInit() {
-    this.transferenceHandler.initialize(
-      this.items,
-      this._selectedItems,
-      this.key
+    this.availableItems = new ListSelectionImpl(
+      difference(this.items, this._selectedItems, this.key)
     );
-  }
-
-  chooseItem(item: any, container: number) {
-    this.transferenceHandler.add(item, container);
+    this.selectedItems = new ListSelectionImpl(this._selectedItems);
   }
 
   transferTo(sourceId: number, targetId: number) {
-    this.transferenceHandler.transfer(sourceId, targetId);
-    this.selectedItemsChange.emit(this.selectedItems);
-  }
+    // TODO
+    console.log(this.availableItems);
+    console.log(this.selectedItems);
 
-  get availableItems() {
-    return this.transferenceHandler.stateOfList.get(1);
-  }
+    const { from, to } = transfer(this.availableItems, this.selectedItems);
+    console.log(from, to);
 
-  get selectedItems() {
-    return this.transferenceHandler.stateOfList.get(2);
-  }
-
-  isChoosed(item: any, idContainer: number) {
-    return this.transferenceHandler.isChoosed(item, idContainer);
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 }
+
+const transfer = (from: ListSelection, to: ListSelection) => {
+  return {
+    from: new ListSelectionImpl(
+      from.totalItems.filter(x => !from.isSelected(x))
+    ),
+    to: new ListSelectionImpl([...from.selectedItems, ...to.totalItems])
+  };
+};
