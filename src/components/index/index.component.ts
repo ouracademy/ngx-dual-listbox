@@ -132,12 +132,14 @@ export class NgxDualListboxComponent implements OnInit {
     const { from, to } = transfer(this.availableItems, this.selectedItems);
     this.availableItems = from;
     this.selectedItems = to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 
   return() {
     const { from, to } = transfer(this.selectedItems, this.availableItems);
     this.selectedItems = from;
     this.availableItems = to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 }
 
