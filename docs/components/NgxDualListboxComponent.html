@@ -445,7 +445,7 @@
            width:90px;
            text-align: center;
      }
-     .choosed{
+    .choosed{
            width: 100%;
            background: #91949c;
            color: white;
@@ -469,8 +469,8 @@
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowRight&quot;&gt;
           &lt;/ng-container&gt;
        &lt;/div&gt;
-      &lt;ng-template #arrowRigth class&#x3D;&quot;btn-arrow&quot;&gt;
-        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Seleccionar&lt;/div&gt;
+      &lt;ng-template #arrowRigth&gt;
+        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;&amp;rarr;&lt;/div&gt;
       &lt;/ng-template&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;return()&quot;&gt;
@@ -479,7 +479,7 @@
           &lt;/ng-container&gt;
         &lt;/div&gt;
         &lt;ng-template #arrowLeft&gt;
-          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Regresar&lt;/div&gt;
+          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;&amp;larr;&lt;/div&gt;
         &lt;/ng-template&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -725,7 +725,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/components/index/index.component.ts:137</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/components/index/index.component.ts:138</a></div>
                                 </td>
                             </tr>
     
@@ -1002,7 +1002,7 @@ import { difference } from &#x27;../../model/set&#x27;;
            width:90px;
            text-align: center;
      }
-     .choosed{
+    .choosed{
            width: 100%;
            background: #91949c;
            color: white;
@@ -1024,8 +1024,8 @@ import { difference } from &#x27;../../model/set&#x27;;
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowRight&quot;&gt;
           &lt;/ng-container&gt;
        &lt;/div&gt;
-      &lt;ng-template #arrowRigth class&#x3D;&quot;btn-arrow&quot;&gt;
-        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Seleccionar&lt;/div&gt;
+      &lt;ng-template #arrowRigth&gt;
+        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;&amp;rarr;&lt;/div&gt;
       &lt;/ng-template&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;return()&quot;&gt;
@@ -1034,7 +1034,7 @@ import { difference } from &#x27;../../model/set&#x27;;
           &lt;/ng-container&gt;
         &lt;/div&gt;
         &lt;ng-template #arrowLeft&gt;
-          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Regresar&lt;/div&gt;
+          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;&amp;larr;&lt;/div&gt;
         &lt;/ng-template&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -1078,12 +1078,14 @@ export class NgxDualListboxComponent implements OnInit {
     const { from, to } &#x3D; transfer(this.availableItems, this.selectedItems);
     this.availableItems &#x3D; from;
     this.selectedItems &#x3D; to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 
   return() {
     const { from, to } &#x3D; transfer(this.selectedItems, this.availableItems);
     this.selectedItems &#x3D; from;
     this.availableItems &#x3D; to;
+    this.selectedItemsChange.emit(this.selectedItems.totalItems);
   }
 }
 
@@ -1122,7 +1124,7 @@ const transfer &#x3D; (from: ListSelection, to: ListSelection) &#x3D;&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>  <div class="container-dualListBox">    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>    <div class="container-buttons">       <div class="" (click)="select()">       <div *ngIf="templateArrowRight;else arrowRigth">          <ng-container [ngTemplateOutlet]="templateArrowRight">          </ng-container>       </div>      <ng-template #arrowRigth class="btn-arrow">        <div class="btn-arrow">Seleccionar</div>      </ng-template>    </div>    <div class="" (click)="return()">        <div *ngIf="templateArrowLeft;else arrowLeft">          <ng-container [ngTemplateOutlet]="templateArrowLeft">          </ng-container>        </div>        <ng-template #arrowLeft>          <div class="btn-arrow">Regresar</div>        </ng-template>    </div>  </div>    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>  <ng-template #noTemplateItem>    {{item.name}}  </ng-template></div></div>'
+        var COMPONENT_TEMPLATE = '<div>  <div class="container-dualListBox">    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>    <div class="container-buttons">       <div class="" (click)="select()">       <div *ngIf="templateArrowRight;else arrowRigth">          <ng-container [ngTemplateOutlet]="templateArrowRight">          </ng-container>       </div>      <ng-template #arrowRigth>        <div class="btn-arrow">&rarr;</div>      </ng-template>    </div>    <div class="" (click)="return()">        <div *ngIf="templateArrowLeft;else arrowLeft">          <ng-container [ngTemplateOutlet]="templateArrowLeft">          </ng-container>        </div>        <ng-template #arrowLeft>          <div class="btn-arrow">&larr;</div>        </ng-template>    </div>  </div>    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>  <ng-template #noTemplateItem>    {{item.name}}  </ng-template></div></div>'
     var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NgxDualListboxComponent'};
