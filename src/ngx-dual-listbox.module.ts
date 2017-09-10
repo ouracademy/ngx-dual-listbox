@@ -1,11 +1,11 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HelloWorldComponent } from './hello-world.component';
+import { NgxDualListboxComponent } from './components/index/index.component';
 
 @NgModule({
-  declarations: [HelloWorldComponent],
+  declarations: [NgxDualListboxComponent],
   imports: [CommonModule],
-  exports: [HelloWorldComponent]
+  exports: [NgxDualListboxComponent]
 })
 export class NgxDualListboxModule {
   static forRoot(): ModuleWithProviders {

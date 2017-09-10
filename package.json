@@ -21,7 +21,7 @@
     "prerelease": "npm test",
     "release:git": "git add package.json && git commit -m \"chore: bump version number\" && standard-version --first-release && git push --follow-tags origin master",
     "release:npm": "npm run build:dist && npm run copyfiles && npm publish dist",
-    "release":"npm run release:git && npm run release:npm",
+    "release": "npm run release:git && npm run release:npm",
     "postrelease": "npm run build:clean && npm run gh-pages",
     "commitmsg": "validate-commit-msg",
     "codecov": "cat coverage/lcov.info | codecov",
@@ -42,7 +42,7 @@
     "angular2",
     "angular"
   ],
-  "author": "Diana Quintanilla",
+  "author": "Ouracademy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ouracademy/ngx-dual-listbox/issues"
@@ -61,6 +61,7 @@
     "@ngtools/webpack": "^1.5.2",
     "@types/chai": "^4.0.0",
     "@types/html-webpack-plugin": "^2.11.2",
+    "@types/lodash": "^4.14.74",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.13",
     "@types/sinon": "^2.1.2",
@@ -115,5 +116,9 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "lodash.difference": "^4.5.0"
   }
 }
