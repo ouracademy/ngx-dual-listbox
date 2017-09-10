@@ -1,0 +1,1175 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-dual-listbox documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-dual-listbox documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">ngx-dual-listbox documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="./license.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/DemoModule.html" >DemoModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/NgxDualListboxModule.html" >NgxDualListboxModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/DemoComponent.html" >DemoComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NgxDualListboxComponent.html"  data-type="entity-link" class="active" >NgxDualListboxComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/ListSelectionImpl.html" >ListSelectionImpl</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">ngx-dual-listbox documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./license.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/DemoModule.html" >DemoModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/NgxDualListboxModule.html" >NgxDualListboxModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/DemoComponent.html" >DemoComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NgxDualListboxComponent.html"  data-type="entity-link" class="active" >NgxDualListboxComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/ListSelectionImpl.html" >ListSelectionImpl</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NgxDualListboxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/components/index/index.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ngx-dual-listbox</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+    *{
+        box-sizing: border-box;
+    }
+    .container-dualListBox{
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        display: flex;
+
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+     }
+     .container-dualListBox &gt; div{
+             height: 100%;
+             max-height: 100%;
+             display: flex;
+             flex-direction: column;
+             place-content: flex-start;
+     }
+     .container-items{
+        align-items: flex-start;
+        width:40%;
+        border: 1px solid #ccc8c8;
+     }
+     .container-buttons{
+        align-items: center;
+        width:20%;
+     }
+     .btn-arrow{
+           border: 1px solid #afa7a7;
+           background: #9c9797;
+           color: white;
+           padding: 3px;
+           margin: 5px;
+           width:90px;
+           text-align: center;
+     }
+     .choosed{
+           width: 100%;
+           background: #91949c;
+           color: white;
+     }</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">  &lt;div class&#x3D;&quot;container-dualListBox&quot;&gt;
+    &lt;div class&#x3D;&quot;container-items&quot; [style.minHeight]&#x3D;&quot;minHeight&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let item of availableItems.totalItems&quot; [ngClass]&#x3D;&quot;{ choosed: availableItems.isSelected(item,1) }&quot; (click)&#x3D;&quot;availableItems.select(item)&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateItem;else noTemplateItem&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;container-buttons&quot;&gt;
+       &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;select()&quot;&gt;
+       &lt;div *ngIf&#x3D;&quot;templateArrowRight;else arrowRigth&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowRight&quot;&gt;
+          &lt;/ng-container&gt;
+       &lt;/div&gt;
+      &lt;ng-template #arrowRigth class&#x3D;&quot;btn-arrow&quot;&gt;
+        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Seleccionar&lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;return()&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateArrowLeft;else arrowLeft&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowLeft&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+        &lt;ng-template #arrowLeft&gt;
+          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Regresar&lt;/div&gt;
+        &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class&#x3D;&quot;container-items&quot; [style.minHeight]&#x3D;&quot;minHeight&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let item of selectedItems.totalItems&quot; [ngClass]&#x3D;&quot;{ choosed: selectedItems.isSelected(item,2) }&quot;  (click)&#x3D;&quot;selectedItems.select(item)&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateItem;else noTemplateItem&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;ng-template #noTemplateItem&gt;
+    {{item.name}}
+  &lt;/ng-template&gt;
+&lt;/div&gt;</code></pre></td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#availableItems">availableItems</a>
+                            </li>
+                            <li>
+                                 <a href="#selectedItems">selectedItems</a>
+                            </li>
+                            <li>
+                                 <a href="#templateArrowLeft">templateArrowLeft</a>
+                            </li>
+                            <li>
+                                 <a href="#templateArrowRight">templateArrowRight</a>
+                            </li>
+                            <li>
+                                 <a href="#templateItem">templateItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#return">return</a>
+                            </li>
+                            <li>
+                                 <a href="#select">select</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                <a href="#key">key</a>
+                            </li>
+                            <li>
+                                <a href="#minHeight">minHeight</a>
+                            </li>
+                            <li>
+                                <a href="#selectedItems">selectedItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#selectedItemsChange">selectedItemsChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="items"></a>
+                            <code>items</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/components/index/index.component.ts:110</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="key"></a>
+                            <code>key</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>id</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/components/index/index.component.ts:109</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="minHeight"></a>
+                            <code>minHeight</code>
+                        </td>
+                        <td class="col-md-10">
+                            <p>
+                              <em>Default value: </em><code>200px</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/components/index/index.component.ts:115</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="selectedItems"></a>
+                            <code>selectedItems</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/components/index/index.component.ts:111</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="outputs">Outputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="selectedItemsChange"></a>
+                            <code>selectedItemsChange</code>
+                        </td>
+                        <td class="col-md-10">
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html" target="_blank" >EventEmitter</a></code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/components/index/index.component.ts:112</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="return"></a>
+                            <span class="name"><b> return</b><a href="#return"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>return()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/components/index/index.component.ts:137</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="select"></a>
+                            <span class="name"><b> select</b><a href="#select"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>select()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/components/index/index.component.ts:131</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="availableItems"></a>
+                            <span class="name"><b> availableItems</b><a href="#availableItems"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>availableItems:     <code><a href="../interfaces/ListSelection.html" target="_self" >ListSelection</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../interfaces/ListSelection.html" target="_self" >ListSelection</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/components/index/index.component.ts:121</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="selectedItems"></a>
+                            <span class="name"><b> selectedItems</b><a href="#selectedItems"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>selectedItems:     <code><a href="../interfaces/ListSelection.html" target="_self" >ListSelection</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../interfaces/ListSelection.html" target="_self" >ListSelection</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/components/index/index.component.ts:122</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="templateArrowLeft"></a>
+                            <span class="name"><b> templateArrowLeft</b><a href="#templateArrowLeft"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>templateArrowLeft:     <code>TemplateRef&lt;any&gt;</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>TemplateRef&lt;any&gt;</code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Decorators : </i><code>ContentChild</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/components/index/index.component.ts:118</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="templateArrowRight"></a>
+                            <span class="name"><b> templateArrowRight</b><a href="#templateArrowRight"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>templateArrowRight:     <code>TemplateRef&lt;any&gt;</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>TemplateRef&lt;any&gt;</code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Decorators : </i><code>ContentChild</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/components/index/index.component.ts:119</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="templateItem"></a>
+                            <span class="name"><b> templateItem</b><a href="#templateItem"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>templateItem:     <code>TemplateRef&lt;any&gt;</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>TemplateRef&lt;any&gt;</code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Decorators : </i><code>ContentChild</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/components/index/index.component.ts:117</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ContentChild,
+  TemplateRef
+} from &#x27;@angular/core&#x27;;
+
+import { ListSelection, ListSelectionImpl } from &#x27;../../model/list-selection&#x27;;
+import { difference } from &#x27;../../model/set&#x27;;
+
+@Component({
+  selector: &#x27;ngx-dual-listbox&#x27;,
+  styles: [
+    &#x60;
+    *{
+        box-sizing: border-box;
+    }
+    .container-dualListBox{
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        display: flex;
+
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+     }
+     .container-dualListBox &gt; div{
+             height: 100%;
+             max-height: 100%;
+             display: flex;
+             flex-direction: column;
+             place-content: flex-start;
+     }
+     .container-items{
+        align-items: flex-start;
+        width:40%;
+        border: 1px solid #ccc8c8;
+     }
+     .container-buttons{
+        align-items: center;
+        width:20%;
+     }
+     .btn-arrow{
+           border: 1px solid #afa7a7;
+           background: #9c9797;
+           color: white;
+           padding: 3px;
+           margin: 5px;
+           width:90px;
+           text-align: center;
+     }
+     .choosed{
+           width: 100%;
+           background: #91949c;
+           color: white;
+     }&#x60;
+  ],
+  template: &#x60;
+  &lt;div class&#x3D;&quot;container-dualListBox&quot;&gt;
+    &lt;div class&#x3D;&quot;container-items&quot; [style.minHeight]&#x3D;&quot;minHeight&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let item of availableItems.totalItems&quot; [ngClass]&#x3D;&quot;{ choosed: availableItems.isSelected(item,1) }&quot; (click)&#x3D;&quot;availableItems.select(item)&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateItem;else noTemplateItem&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;container-buttons&quot;&gt;
+       &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;select()&quot;&gt;
+       &lt;div *ngIf&#x3D;&quot;templateArrowRight;else arrowRigth&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowRight&quot;&gt;
+          &lt;/ng-container&gt;
+       &lt;/div&gt;
+      &lt;ng-template #arrowRigth class&#x3D;&quot;btn-arrow&quot;&gt;
+        &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Seleccionar&lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;&quot; (click)&#x3D;&quot;return()&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateArrowLeft;else arrowLeft&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateArrowLeft&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+        &lt;ng-template #arrowLeft&gt;
+          &lt;div class&#x3D;&quot;btn-arrow&quot;&gt;Regresar&lt;/div&gt;
+        &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class&#x3D;&quot;container-items&quot; [style.minHeight]&#x3D;&quot;minHeight&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let item of selectedItems.totalItems&quot; [ngClass]&#x3D;&quot;{ choosed: selectedItems.isSelected(item,2) }&quot;  (click)&#x3D;&quot;selectedItems.select(item)&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;templateItem;else noTemplateItem&quot;&gt;
+          &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
+          &lt;/ng-container&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;ng-template #noTemplateItem&gt;
+    {{item.name}}
+  &lt;/ng-template&gt;
+&lt;/div&gt;&#x60;
+})
+export class NgxDualListboxComponent implements OnInit {
+  @Input() key &#x3D; &#x27;id&#x27;;
+  @Input() items: any[];
+  @Input(&#x27;selectedItems&#x27;) _selectedItems: any[];
+  @Output() selectedItemsChange &#x3D; new EventEmitter&lt;any[]&gt;();
+
+  // TODO: add custom properties like, display name, enable filter, enable sort
+  @Input() minHeight &#x3D; &#x27;200px&#x27;;
+
+  @ContentChild(&#x27;templateItem&#x27;) templateItem: TemplateRef&lt;any&gt;;
+  @ContentChild(&#x27;templateArrowLeft&#x27;) templateArrowLeft: TemplateRef&lt;any&gt;;
+  @ContentChild(&#x27;templateArrowRight&#x27;) templateArrowRight: TemplateRef&lt;any&gt;;
+
+  availableItems: ListSelection;
+  selectedItems: ListSelection;
+
+  ngOnInit() {
+    this.availableItems &#x3D; new ListSelectionImpl(
+      difference(this.items, this._selectedItems, this.key)
+    );
+    this.selectedItems &#x3D; new ListSelectionImpl(this._selectedItems);
+  }
+
+  select() {
+    const { from, to } &#x3D; transfer(this.availableItems, this.selectedItems);
+    this.availableItems &#x3D; from;
+    this.selectedItems &#x3D; to;
+  }
+
+  return() {
+    const { from, to } &#x3D; transfer(this.selectedItems, this.availableItems);
+    this.selectedItems &#x3D; from;
+    this.availableItems &#x3D; to;
+  }
+}
+
+const transfer &#x3D; (from: ListSelection, to: ListSelection) &#x3D;&gt; {
+  return {
+    from: new ListSelectionImpl(
+      from.totalItems.filter(x &#x3D;&gt; !from.isSelected(x))
+    ),
+    to: new ListSelectionImpl([...from.selectedItems, ...to.totalItems])
+  };
+};
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div>  <div class="container-dualListBox">    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>    <div class="container-buttons">       <div class="" (click)="select()">       <div *ngIf="templateArrowRight;else arrowRigth">          <ng-container [ngTemplateOutlet]="templateArrowRight">          </ng-container>       </div>      <ng-template #arrowRigth class="btn-arrow">        <div class="btn-arrow">Seleccionar</div>      </ng-template>    </div>    <div class="" (click)="return()">        <div *ngIf="templateArrowLeft;else arrowLeft">          <ng-container [ngTemplateOutlet]="templateArrowLeft">          </ng-container>        </div>        <ng-template #arrowLeft>          <div class="btn-arrow">Regresar</div>        </ng-template>    </div>  </div>    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>  <ng-template #noTemplateItem>    {{item.name}}  </ng-template></div></div>'
+    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NgxDualListboxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>

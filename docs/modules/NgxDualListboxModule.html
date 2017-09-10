@@ -100,14 +100,46 @@
                                     <a href="../components/DemoComponent.html" >DemoComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/HelloWorldComponent.html" >HelloWorldComponent</a>
+                                    <a href="../components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
                                 </li>
                         </ul>
                     </li>
             
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/ListSelectionImpl.html" >ListSelectionImpl</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                </li>
+                        </ul>
+                    </li>
             
             
                     <li class="chapter">
@@ -121,6 +153,9 @@
                         <ul class="links collapse "
                                 id="xs-miscellaneous-links"
                             >
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
                                 <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
@@ -226,14 +261,46 @@
                                            <a href="../components/DemoComponent.html" >DemoComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/HelloWorldComponent.html" >HelloWorldComponent</a>
+                                           <a href="../components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
                                        </li>
                                </ul>
                            </li>
                    
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/ListSelectionImpl.html" >ListSelectionImpl</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                    
                            <li class="chapter">
@@ -247,6 +314,9 @@
                                <ul class="links collapse "
                                        id="miscellaneous-links"
                    >
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
                                        <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
@@ -302,18 +372,18 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
-                                <a href="../components/HelloWorldComponent.html">HelloWorldComponent</a>
+                                <a href="../components/NgxDualListboxComponent.html">NgxDualListboxComponent</a>
                             </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Exports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#exports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
-                                    <a href="../components/HelloWorldComponent.html" >HelloWorldComponent</a>
+                                    <a href="../components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
                             </li>
                     </ul>
                 </div>
@@ -325,12 +395,12 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { NgModule, ModuleWithProviders } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-import { HelloWorldComponent } from &#x27;./hello-world.component&#x27;;
+import { NgxDualListboxComponent } from &#x27;./components/index/index.component&#x27;;
 
 @NgModule({
-  declarations: [HelloWorldComponent],
+  declarations: [NgxDualListboxComponent],
   imports: [CommonModule],
-  exports: [HelloWorldComponent]
+  exports: [NgxDualListboxComponent]
 })
 export class NgxDualListboxModule {
   static forRoot(): ModuleWithProviders {
