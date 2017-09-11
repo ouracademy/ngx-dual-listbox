@@ -97,10 +97,19 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
+                                    <a href="./components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="./components/DemoComponent.html" >DemoComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="./components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -137,6 +146,15 @@
                             >
                                 <li class="link">
                                     <a href="./interfaces/ListSelection.html" >ListSelection</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./interfaces/MenuItem.html" >MenuItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./interfaces/Movie.html" >Movie</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./interfaces/Movie.html" >Movie</a>
                                 </li>
                         </ul>
                     </li>
@@ -258,10 +276,19 @@
                                        id="components-links"
                    >
                                        <li class="link">
+                                           <a href="./components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="./components/DemoComponent.html" >DemoComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="./components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -298,6 +325,15 @@
                    >
                                        <li class="link">
                                            <a href="./interfaces/ListSelection.html" >ListSelection</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./interfaces/MenuItem.html" >MenuItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./interfaces/Movie.html" >Movie</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./interfaces/Movie.html" >Movie</a>
                                        </li>
                                </ul>
                            </li>
@@ -339,7 +375,7 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="library-ui-abput-selection">Library ui abput selection</h1>
+<h1 id="ngx-dual-listbox-angular-dual-list-box">ngx-dual-listbox / Angular dual list box</h1>
 <p><a href="https://travis-ci.org/ouracademy/ngx-dual-listbox"><img src="https://travis-ci.org/ouracademy/ngx-dual-listbox.svg?branch=master" alt="Build Status" class="img-responsive"></a>
 <a href="https://codecov.io/gh/ouracademy/ngx-dual-listbox"><img src="https://codecov.io/gh/ouracademy/ngx-dual-listbox/branch/master/graph/badge.svg" alt="codecov" class="img-responsive"></a>
 <a href="http://badge.fury.io/js/ngx-dual-listbox"><img src="https://badge.fury.io/js/ngx-dual-listbox.svg" alt="npm version" class="img-responsive"></a>
@@ -358,7 +394,7 @@
 <li><a href="#license">License</a></li>
 </ul>
 <h2 id="about">About</h2>
-<p>Library ui abput selection</p>
+<p>A dual list box component for Angular 2+</p>
 <h2 id="installation">Installation</h2>
 <p>Install through npm:</p>
 <pre class="line-numbers"><code class="language-none">npm install --save ngx-dual-listbox</code></pre><p>Then include in your apps module:</p>
@@ -374,9 +410,22 @@ export class MyModule {}</code></pre><p>Finally use in one of your apps componen
 <pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
 
 &#64;Component({
-  template: &#39;&lt;hello-world&gt;&lt;/hello-world&gt;&#39;
+  template: `
+    &lt;ngx-dual-listbox [items]=&quot;items&quot; [(selectedItems)]=&quot;selectedItems&quot;&gt;
+    &lt;/ngx-dual-listbox&gt;
+  `
 })
-export class MyComponent {}</code></pre><p>You may also find it useful to view the <a href="https://github.com/ouracademy/ngx-dual-listbox/blob/master/demo/demo.component.ts">demo source</a>.</p>
+export class MyComponent {
+  items: any[] = [
+    { id: 1, name: &#39;Movie 1&#39;, url: &#39;&#39; },
+    { id: 2, name: &#39;Movie 2&#39;, url: &#39;&#39; },
+    { id: 3, name: &#39;Movie 3&#39;, url: &#39;&#39; },
+    { id: 4, name: &#39;Movie 4&#39;, url: &#39;&#39; },
+    { id: 5, name: &#39;Movie 5&#39;, url: &#39;&#39; }
+  ];
+
+  selectedItems: any[] = [{ id: 1, name: &#39;Movie 1&#39;, url: &#39;&#39; }];
+}</code></pre><p>You may also find it useful to view the <a href="https://github.com/ouracademy/ngx-dual-listbox/blob/master/demo/demo.component.ts">demo source</a>.</p>
 <h3 id="usage-without-a-module-bundler">Usage without a module bundler</h3>
 <pre class="line-numbers"><code class="language-none">&lt;script src=&quot;node_modules/ngx-dual-listbox/bundles/ngx-dual-listbox.umd.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;

@@ -97,10 +97,19 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
+                                    <a href="../components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DemoComponent.html" >DemoComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NgxDualListboxComponent.html"  data-type="entity-link" class="active" >NgxDualListboxComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -137,6 +146,15 @@
                             >
                                 <li class="link">
                                     <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Movie.html" >Movie</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Movie.html" >Movie</a>
                                 </li>
                         </ul>
                     </li>
@@ -258,10 +276,19 @@
                                        id="components-links"
                    >
                                        <li class="link">
+                                           <a href="../components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DemoComponent.html" >DemoComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NgxDualListboxComponent.html"  data-type="entity-link" class="active" >NgxDualListboxComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -298,6 +325,15 @@
                    >
                                        <li class="link">
                                            <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Movie.html" >Movie</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Movie.html" >Movie</a>
                                        </li>
                                </ul>
                            </li>
@@ -461,6 +497,9 @@
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
           &lt;/ng-container&gt;
         &lt;/div&gt;
+        &lt;ng-template #noTemplateItem&gt;
+          {{item.name}}
+        &lt;/ng-template&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;container-buttons&quot;&gt;
@@ -489,11 +528,11 @@
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
           &lt;/ng-container&gt;
         &lt;/div&gt;
+        &lt;ng-template #noTemplateItem&gt;
+          {{item.name}}
+        &lt;/ng-template&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;ng-template #noTemplateItem&gt;
-    {{item.name}}
-  &lt;/ng-template&gt;
 &lt;/div&gt;</code></pre></td>
             </tr>
 
@@ -610,7 +649,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/components/index/index.component.ts:110</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/components/index/index.component.ts:113</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -630,7 +669,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/components/index/index.component.ts:109</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/components/index/index.component.ts:112</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -650,7 +689,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/components/index/index.component.ts:115</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/components/index/index.component.ts:118</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -671,7 +710,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/components/index/index.component.ts:111</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/components/index/index.component.ts:114</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -694,7 +733,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/components/index/index.component.ts:112</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/components/index/index.component.ts:115</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -725,7 +764,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/components/index/index.component.ts:138</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/components/index/index.component.ts:141</a></div>
                                 </td>
                             </tr>
     
@@ -757,7 +796,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/components/index/index.component.ts:131</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/components/index/index.component.ts:134</a></div>
                                 </td>
                             </tr>
     
@@ -801,7 +840,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/components/index/index.component.ts:121</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/components/index/index.component.ts:124</a></div>
                                 </td>
                             </tr>
     
@@ -830,7 +869,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/components/index/index.component.ts:122</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/components/index/index.component.ts:125</a></div>
                                 </td>
                             </tr>
     
@@ -864,7 +903,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/components/index/index.component.ts:118</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/components/index/index.component.ts:121</a></div>
                                 </td>
                             </tr>
     
@@ -898,7 +937,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/components/index/index.component.ts:119</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/components/index/index.component.ts:122</a></div>
                                 </td>
                             </tr>
     
@@ -932,7 +971,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/components/index/index.component.ts:117</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/components/index/index.component.ts:120</a></div>
                                 </td>
                             </tr>
     
@@ -1016,6 +1055,9 @@ import { difference } from &#x27;../../model/set&#x27;;
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
           &lt;/ng-container&gt;
         &lt;/div&gt;
+        &lt;ng-template #noTemplateItem&gt;
+          {{item.name}}
+        &lt;/ng-template&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;container-buttons&quot;&gt;
@@ -1044,11 +1086,11 @@ import { difference } from &#x27;../../model/set&#x27;;
           &lt;ng-container [ngTemplateOutlet]&#x3D;&quot;templateItem&quot; [ngOutletContext]&#x3D;&quot;{ data: item }&quot;&gt;
           &lt;/ng-container&gt;
         &lt;/div&gt;
+        &lt;ng-template #noTemplateItem&gt;
+          {{item.name}}
+        &lt;/ng-template&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;ng-template #noTemplateItem&gt;
-    {{item.name}}
-  &lt;/ng-template&gt;
 &lt;/div&gt;&#x60;
 })
 export class NgxDualListboxComponent implements OnInit {
@@ -1124,8 +1166,8 @@ const transfer &#x3D; (from: ListSelection, to: ListSelection) &#x3D;&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>  <div class="container-dualListBox">    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>    <div class="container-buttons">       <div class="" (click)="select()">       <div *ngIf="templateArrowRight;else arrowRigth">          <ng-container [ngTemplateOutlet]="templateArrowRight">          </ng-container>       </div>      <ng-template #arrowRigth>        <div class="btn-arrow">&rarr;</div>      </ng-template>    </div>    <div class="" (click)="return()">        <div *ngIf="templateArrowLeft;else arrowLeft">          <ng-container [ngTemplateOutlet]="templateArrowLeft">          </ng-container>        </div>        <ng-template #arrowLeft>          <div class="btn-arrow">&larr;</div>        </ng-template>    </div>  </div>    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>      </div>    </div>  <ng-template #noTemplateItem>    {{item.name}}  </ng-template></div></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'}];
+        var COMPONENT_TEMPLATE = '<div>  <div class="container-dualListBox">    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of availableItems.totalItems" [ngClass]="{ choosed: availableItems.isSelected(item,1) }" (click)="availableItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>        <ng-template #noTemplateItem>          {{item.name}}        </ng-template>      </div>    </div>    <div class="container-buttons">       <div class="" (click)="select()">       <div *ngIf="templateArrowRight;else arrowRigth">          <ng-container [ngTemplateOutlet]="templateArrowRight">          </ng-container>       </div>      <ng-template #arrowRigth>        <div class="btn-arrow">&rarr;</div>      </ng-template>    </div>    <div class="" (click)="return()">        <div *ngIf="templateArrowLeft;else arrowLeft">          <ng-container [ngTemplateOutlet]="templateArrowLeft">          </ng-container>        </div>        <ng-template #arrowLeft>          <div class="btn-arrow">&larr;</div>        </ng-template>    </div>  </div>    <div class="container-items" [style.minHeight]="minHeight">      <div *ngFor="let item of selectedItems.totalItems" [ngClass]="{ choosed: selectedItems.isSelected(item,2) }"  (click)="selectedItems.select(item)">        <div *ngIf="templateItem;else noTemplateItem">          <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">          </ng-container>        </div>        <ng-template #noTemplateItem>          {{item.name}}        </ng-template>      </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'CustomKeyDemoComponent', 'selector': 'ngx-custom-key'},{'name': 'CustomTemplateComponent', 'selector': 'ngx-custom-template'},{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'},{'name': 'SimpleDemoComponent', 'selector': 'ngx-simple-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NgxDualListboxComponent'};
 </script>

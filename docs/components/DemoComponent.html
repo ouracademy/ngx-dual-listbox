@@ -97,10 +97,19 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
+                                    <a href="../components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DemoComponent.html"  data-type="entity-link" class="active" >DemoComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -137,6 +146,15 @@
                             >
                                 <li class="link">
                                     <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Movie.html" >Movie</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Movie.html" >Movie</a>
                                 </li>
                         </ul>
                     </li>
@@ -258,10 +276,19 @@
                                        id="components-links"
                    >
                                        <li class="link">
+                                           <a href="../components/CustomKeyDemoComponent.html" >CustomKeyDemoComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CustomTemplateComponent.html" >CustomTemplateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DemoComponent.html"  data-type="entity-link" class="active" >DemoComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NgxDualListboxComponent.html" >NgxDualListboxComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/SimpleDemoComponent.html" >SimpleDemoComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -298,6 +325,15 @@
                    >
                                        <li class="link">
                                            <a href="../interfaces/ListSelection.html" >ListSelection</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Movie.html" >Movie</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Movie.html" >Movie</a>
                                        </li>
                                </ul>
                            </li>
@@ -395,29 +431,13 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-3">styles</td>
-                <td class="col-md-9"><code>.sample-dual-listbox{
-       width: 600px;
-       margin: auto;
-    }</code></td>
-            </tr>
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">    &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;p&gt;Custom template&lt;/p&gt;
-    &lt;div class&#x3D;&quot;sample-dual-listbox&quot;&gt;
-    &lt;ngx-dual-listbox [items]&#x3D;&quot;items&quot; [(selectedItems)]&#x3D;&quot;selectedItems&quot;&gt;
-        &lt;ng-template #templateItem let-item&#x3D;&quot;data&quot;&gt;
-            &lt;p&gt;{{item.name}}&lt;/p&gt;
-        &lt;/ng-template&gt;
-    &lt;/ngx-dual-listbox&gt;
-    &lt;/div&gt;
-    &lt;p&gt;List of items selectedItems&lt;/p&gt;
-    &lt;div *ngFor&#x3D;&quot;let item of selectedItems&quot;&gt;
-        {{item.name}}
-    &lt;/div&gt;
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;ngx-simple-demo&gt;&lt;/ngx-simple-demo&gt;
+  &lt;ngx-custom-key&gt;&lt;/ngx-custom-key&gt;
+  &lt;ngx-custom-template&gt;&lt;/ngx-custom-template&gt;
 &lt;/div&gt;
 </code></pre></td>
             </tr>
@@ -428,30 +448,6 @@
     </table>
 </section>
 
-    <section>
-        <h3 id="index">Index</h3>
-        <table class="table table-sm table-bordered index-table">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                 <a href="#items">items</a>
-                            </li>
-                            <li>
-                                 <a href="#selectedItems">selectedItems</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
 
 
 
@@ -459,70 +455,6 @@
 
 
 
-    <section>
-        
-            <h3 id="inputs">
-                Properties
-            </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="items"></a>
-                            <span class="name"><b> items</b><a href="#items"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>items:     <code>any[]</code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code>any[]</code>
-    
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">demo/demo.component.ts:29</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="selectedItems"></a>
-                            <span class="name"><b> selectedItems</b><a href="#selectedItems"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>selectedItems:     <code>any[]</code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code>any[]</code>
-    
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">demo/demo.component.ts:37</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-    </section>
 </div>
 
 
@@ -531,40 +463,15 @@
 
 @Component({
   selector: &#x27;ngx-demo-app&#x27;,
-  styles: [
-    &#x60;.sample-dual-listbox{
-       width: 600px;
-       margin: auto;
-    }&#x60;
-  ],
   template: &#x60;
     &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;p&gt;Custom template&lt;/p&gt;
-    &lt;div class&#x3D;&quot;sample-dual-listbox&quot;&gt;
-    &lt;ngx-dual-listbox [items]&#x3D;&quot;items&quot; [(selectedItems)]&#x3D;&quot;selectedItems&quot;&gt;
-        &lt;ng-template #templateItem let-item&#x3D;&quot;data&quot;&gt;
-            &lt;p&gt;{{item.name}}&lt;/p&gt;
-        &lt;/ng-template&gt;
-    &lt;/ngx-dual-listbox&gt;
+      &lt;ngx-simple-demo&gt;&lt;/ngx-simple-demo&gt;
+      &lt;ngx-custom-key&gt;&lt;/ngx-custom-key&gt;
+      &lt;ngx-custom-template&gt;&lt;/ngx-custom-template&gt;
     &lt;/div&gt;
-    &lt;p&gt;List of items selectedItems&lt;/p&gt;
-    &lt;div *ngFor&#x3D;&quot;let item of selectedItems&quot;&gt;
-        {{item.name}}
-    &lt;/div&gt;
-&lt;/div&gt;
   &#x60;
 })
-export class DemoComponent {
-  items: any[] &#x3D; [
-    { id: 1, name: &#x27;Movie 1&#x27;, url: &#x27;&#x27; },
-    { id: 2, name: &#x27;Movie 2&#x27;, url: &#x27;&#x27; },
-    { id: 3, name: &#x27;Movie 3&#x27;, url: &#x27;&#x27; },
-    { id: 4, name: &#x27;Movie 4&#x27;, url: &#x27;&#x27; },
-    { id: 5, name: &#x27;Movie 5&#x27;, url: &#x27;&#x27; }
-  ];
-
-  selectedItems: any[] &#x3D; [{ id: 1, name: &#x27;Movie 1&#x27;, url: &#x27;&#x27; }];
-}
+export class DemoComponent {}
 </code></pre>
     </div>
 
@@ -592,8 +499,8 @@ export class DemoComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>    <div class="container">    <p>Custom template</p>    <div class="sample-dual-listbox">    <ngx-dual-listbox [items]="items" [(selectedItems)]="selectedItems">        <ng-template #templateItem let-item="data">            <p>{{item.name}}</p>        </ng-template>    </ngx-dual-listbox>    </div>    <p>List of items selectedItems</p>    <div *ngFor="let item of selectedItems">        {{item.name}}    </div></div></div>'
-    var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <ngx-simple-demo></ngx-simple-demo>  <ngx-custom-key></ngx-custom-key>  <ngx-custom-template></ngx-custom-template></div></div>'
+    var COMPONENTS = [{'name': 'CustomKeyDemoComponent', 'selector': 'ngx-custom-key'},{'name': 'CustomTemplateComponent', 'selector': 'ngx-custom-template'},{'name': 'DemoComponent', 'selector': 'ngx-demo-app'},{'name': 'NgxDualListboxComponent', 'selector': 'ngx-dual-listbox'},{'name': 'SimpleDemoComponent', 'selector': 'ngx-simple-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DemoComponent'};
 </script>

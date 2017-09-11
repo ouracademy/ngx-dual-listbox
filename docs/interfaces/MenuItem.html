@@ -148,7 +148,7 @@
                                     <a href="../interfaces/ListSelection.html" >ListSelection</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                    <a href="../interfaces/MenuItem.html"  data-type="entity-link" class="active" >MenuItem</a>
                                 </li>
                                 <li class="link">
                                     <a href="../interfaces/Movie.html" >Movie</a>
@@ -172,7 +172,7 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/functions.html" data-type="entity-link"  class="active" >Functions</a>
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
                                 </li>
                                 <li class="link">
                                   <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
@@ -327,7 +327,7 @@
                                            <a href="../interfaces/ListSelection.html" >ListSelection</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../interfaces/MenuItem.html" >MenuItem</a>
+                                           <a href="../interfaces/MenuItem.html"  data-type="entity-link" class="active" >MenuItem</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/Movie.html" >Movie</a>
@@ -351,7 +351,7 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/functions.html" data-type="entity-link"  class="active" >Functions</a>
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
                                        </li>
                                        <li class="link">
                                          <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
@@ -372,7 +372,7 @@
                    
                    </nav>
                </div>
-               <div class="content miscellaneous-functions">
+               <div class="content interface">
                    <div class="content-data">
 
 
@@ -383,71 +383,234 @@
 
 
 
-
-
 <ol class="breadcrumb">
-  <li>Miscellaneous - Functions</li>
+  <li>Interfaces</li>
+  <li>MenuItem</li>
 </ol>
 
-<section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#belongs">belongs</a>
-                        </li>
-                        <li>
-                            <a href="#difference">difference</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
 
-    <h3>src/model/set.ts</h3>
-    <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>demo/components/custom-template.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="belongs"></a>
-                            <span class="name"><b> belongs</b><a href="#belongs"><span class="fa fa-link"></span></a></span>
+                            <h6><b>Properties</b></h6>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-    <code>belongs(item: undefined, array: undefined, key: undefined)</code>
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#badge">badge</a>
+                                </li>
+                                <li>
+                                        <a href="#id">id</a>
+                                </li>
+                                <li>
+                                        <a href="#text">text</a>
+                                </li>
+                            </ul>
                         </td>
                     </tr>
-    
-    
-    
                 </tbody>
             </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="difference"></a>
-                            <span class="name"><b> difference</b><a href="#difference"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>difference(arrayOne: undefined, arrayTwo: undefined, key: undefined)</code>
-                        </td>
-                    </tr>
-    
-    
-    
-                </tbody>
-            </table>
-    </section>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="badge"></a>
+                                        <span class="name"><b>badge</b><a href="#badge"><span class="fa fa-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>badge:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">demo/components/custom-template.ts:59</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="id"></a>
+                                        <span class="name"><b>id</b><a href="#id"><span class="fa fa-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>id:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">demo/components/custom-template.ts:57</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="text"></a>
+                                        <span class="name"><b>text</b><a href="#text"><span class="fa fa-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>text:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">demo/components/custom-template.ts:58</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;ngx-custom-template&#x27;,
+  styles: [
+    &#x60; 
+    .custom-item {
+      list-style: none;
+    }
+
+    /* Sounds like bootstrap? */
+    .custom-badge {
+      display: inline-block;
+      min-width: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: #777;
+      border-radius: 10px;
+    }    
+  &#x60;
+  ],
+  template: &#x60;
+    &lt;h2&gt;Custom template&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;sample-dual-listbox&quot;&gt;
+      &lt;ngx-dual-listbox class&#x3D;&quot;list-group&quot; [items]&#x3D;&quot;items&quot; [(selectedItems)]&#x3D;&quot;selectedItems&quot;&gt;
+        &lt;ng-template #templateItem let-item&#x3D;&quot;data&quot;&gt;
+          &lt;li class&#x3D;&quot;custom-item&quot;&gt;
+            &lt;span class&#x3D;&quot;custom-badge&quot;&gt;{{item.badge}}&lt;/span&gt;
+            {{item.text}}
+          &lt;/li&gt;
+        &lt;/ng-template&gt;
+      &lt;/ngx-dual-listbox&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;List of items selectedItems&lt;/h3&gt;
+    &lt;div *ngFor&#x3D;&quot;let item of selectedItems&quot;&gt;
+        {{item | json}}
+    &lt;/div&gt;
+    &#x60;
+})
+export class CustomTemplateComponent {
+  items: MenuItem[] &#x3D; [
+    { id: 1, text: &#x27;News&#x27;, badge: 5 },
+    { id: 2, text: &#x27;Comments&#x27;, badge: 10 },
+    { id: 3, text: &#x27;Updates&#x27;, badge: 2 }
+  ];
+
+  selectedItems: MenuItem[] &#x3D; [{ id: 1, text: &#x27;News&#x27;, badge: 5 }];
+}
+
+interface MenuItem {
+  id: number;
+  text: string;
+  badge: number;
+}
+</code></pre>
+    </div>
+</div>
+
+
 
 
                    </div><div class="search-results">
