@@ -70,6 +70,9 @@ import { difference } from '../../model/set';
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
         </div>
+        <ng-template #noTemplateItem>
+          {{item.name}}
+        </ng-template>
       </div>
     </div>
     <div class="container-buttons">
@@ -98,11 +101,11 @@ import { difference } from '../../model/set';
           <ng-container [ngTemplateOutlet]="templateItem" [ngOutletContext]="{ data: item }">
           </ng-container>
         </div>
+        <ng-template #noTemplateItem>
+          {{item.name}}
+        </ng-template>
       </div>
     </div>
-  <ng-template #noTemplateItem>
-    {{item.name}}
-  </ng-template>
 </div>`
 })
 export class NgxDualListboxComponent implements OnInit {

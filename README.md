@@ -1,4 +1,4 @@
-# Library ui abput selection
+# ngx-dual-listbox / Angular dual list box
 [![Build Status](https://travis-ci.org/ouracademy/ngx-dual-listbox.svg?branch=master)](https://travis-ci.org/ouracademy/ngx-dual-listbox)
 [![codecov](https://codecov.io/gh/ouracademy/ngx-dual-listbox/branch/master/graph/badge.svg)](https://codecov.io/gh/ouracademy/ngx-dual-listbox)
 [![npm version](https://badge.fury.io/js/ngx-dual-listbox.svg)](http://badge.fury.io/js/ngx-dual-listbox)
@@ -20,7 +20,7 @@ https://ouracademy.github.io/ngx-dual-listbox/
 
 ## About
 
-Library ui abput selection
+A dual list box component for Angular 2+
 
 ## Installation
 
@@ -48,9 +48,22 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<hello-world></hello-world>'
+  template: `
+    <ngx-dual-listbox [items]="items" [(selectedItems)]="selectedItems">
+    </ngx-dual-listbox>
+  `
 })
-export class MyComponent {}
+export class MyComponent {
+  items: any[] = [
+    { id: 1, name: 'Movie 1', url: '' },
+    { id: 2, name: 'Movie 2', url: '' },
+    { id: 3, name: 'Movie 3', url: '' },
+    { id: 4, name: 'Movie 4', url: '' },
+    { id: 5, name: 'Movie 5', url: '' }
+  ];
+
+  selectedItems: any[] = [{ id: 1, name: 'Movie 1', url: '' }];
+}
 ```
 
 You may also find it useful to view the [demo source](https://github.com/ouracademy/ngx-dual-listbox/blob/master/demo/demo.component.ts).

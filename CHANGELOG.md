@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/ouracademy/ngx-dual-listbox/compare/v0.1.2...v0.2.0) (2017-09-11)
+
+
+### Features
+
+* **demo:** add custom key demo ([ee0869b](https://github.com/ouracademy/ngx-dual-listbox/commit/ee0869b))
+* **demo:** add custom template demo ([c383f2a](https://github.com/ouracademy/ngx-dual-listbox/commit/c383f2a))
+
+
+### Reverts
+
+* **index:** fix bug by repeating noTemplateItem ([04224f7](https://github.com/ouracademy/ngx-dual-listbox/commit/04224f7))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/ouracademy/ngx-dual-listbox/compare/v0.1.1...v0.1.2) (2017-09-10)
 

@@ -6,9 +6,9 @@
     "moduleGlobal": "ngxDualListbox",
     "ngModuleName": "NgxDualListboxModule",
     "selectorPrefix": "ngx",
-    "projectTitle": "Library ui abput selection",
-    "projectDescription": "Library ui abput selection",
-    "authorName": "Diana Quintanilla",
+    "projectTitle": "ngx-dual-listbox / Angular dual list box",
+    "projectDescription": "ngx-dual-listbox / Angular dual list box",
+    "authorName": "Ouracademy",
     "packageManager": "npm"
   }
 }
