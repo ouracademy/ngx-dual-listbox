@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="container">
       <ngx-simple-demo></ngx-simple-demo>
+      <ngx-custom-key></ngx-custom-key>
     </div>
   `
 })
