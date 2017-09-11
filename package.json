@@ -1,7 +1,7 @@
 {
   "name": "ngx-dual-listbox",
   "version": "0.1.2",
-  "description": "Library ui abput selection",
+  "description": "A dual list box component for Angular 2+",
   "main": "./bundles/ngx-dual-listbox.umd.js",
   "module": "./index.js",
   "typings": "./index.d.ts",
@@ -40,7 +40,11 @@
   },
   "keywords": [
     "angular2",
-    "angular"
+    "angular",
+    "dual-listbox",
+    "duallistbox",
+    "listbox",
+    "list box"
   ],
   "author": "Ouracademy",
   "license": "MIT",

@@ -10,23 +10,22 @@ import { Component } from '@angular/core';
   ],
   template: `
     <div class="container">
-    <p>Custom template</p>
-    <div class="sample-dual-listbox">
-    <ngx-dual-listbox [items]="items" [(selectedItems)]="selectedItems">
-        <ng-template #templateItem let-item="data">
-            <p>{{item.name}}</p>
-        </ng-template>
-    </ngx-dual-listbox>
+      <h2>Simple demo</h2>
+      <p>With default key (your object needs to have an 'id') and
+      default template (show the item's name)</p>
+      <div class="sample-dual-listbox">
+        <ngx-dual-listbox [items]="items" [(selectedItems)]="selectedItems">
+        </ngx-dual-listbox>
+      </div>
+      <h3>List of items selectedItems</h3>
+      <div *ngFor="let item of selectedItems">
+          {{item | json}}
+      </div>
     </div>
-    <p>List of items selectedItems</p>
-    <div *ngFor="let item of selectedItems">
-        {{item.name}}
-    </div>
-</div>
   `
 })
 export class DemoComponent {
-  items: any[] = [
+  items: Movie[] = [
     { id: 1, name: 'Movie 1', url: '' },
     { id: 2, name: 'Movie 2', url: '' },
     { id: 3, name: 'Movie 3', url: '' },
@@ -34,5 +33,11 @@ export class DemoComponent {
     { id: 5, name: 'Movie 5', url: '' }
   ];
 
-  selectedItems: any[] = [{ id: 1, name: 'Movie 1', url: '' }];
+  selectedItems: Movie[] = [{ id: 1, name: 'Movie 1', url: '' }];
+}
+
+interface Movie {
+  id: number;
+  name: string;
+  url: string;
 }
